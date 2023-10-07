@@ -1,31 +1,36 @@
-# bip-watchfaces
+# Bip Watchfaces
 
-repository with my watchfaces for the Amazfit Bip
+Repository with my watchfaces for the Amazfit Bip.
 
-# gallery
+# Gallery
 
 ![](watch_skin_local/gameboy/gameboy_packed_animated.gif)
 
-# install
+# Install
 
-* install the [Zeep Life](https://play.google.com/store/apps/details?id=com.xiaomi.hm.health) app and sync your device
-* copy a watchface directory from [watch_skin_local](watch_skin_local)
-* paste to your android storage at `.../Internal shared storage/Android/data/com.xiaomi.hm.health/files/watch_skin_local/`
+* Install the [Zeep Life](https://play.google.com/store/apps/details?id=com.xiaomi.hm.health) app and sync your device
+* Copy a watchface directory from [watch_skin_local](watch_skin_local)
+* Paste to your android storage at `.../Internal shared storage/Android/data/com.xiaomi.hm.health/files/watch_skin_local/`
 * Zeep Life > Profile > My devices > Amazfit Bip > Watch face settings > Local watch faces
-* select the added watchface
+* Select the added watchface
 * Sync watch face
 
-# pack
+# Pack
 
 ```bash
+# Download and extract AmazfitBipTools
 wget https://bitbucket.org/valeronm/amazfitbiptools/downloads/AmazfitBipTools-1.0.3.1.7z
 7z x -o* AmazfitBipTools-1.0.3.1.7z
-mono AmazfitBipTools-1.0.3.1/WatchFace.exe gameboy/gameboy.json
-python3 fix_header.py gameboy/gameboy_packed.bin
+
+# Pack watchface
+mono AmazfitBipTools-1.0.3.1/WatchFace.exe watchface/watchface.json
+
+# Fix header
+python3 fix_header.py watchface/watchface_packed.bin
 ```
 
-# references
+# References
 
 * https://www.amazfit.com/en/bip
 * https://bitbucket.org/valeronm/amazfitbiptools/
-* [Nintendo](www.nintendo.com) Game Boy
+* [Nintendo](https://www.nintendo.com) Game Boy
